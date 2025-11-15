@@ -24,7 +24,7 @@ class Application(Gtk.Application):
             ord("n"),
             GLib.OptionFlags(0),
             GLib.OptionArg.NONE,  # Adjusted for boolean flag (no argument expected)
-            "No GUI mode",
+            "Work on terminal (no GUI mode)",
             None,
         )
         GLib.set_prgname("tr.org.pardus.about")

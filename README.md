@@ -10,14 +10,14 @@ It is currently a work in progress. Maintenance is done by <a href="https://www.
 
 This application is developed based on Python3 and GTK+ 3. Dependencies:
 ```bash
-gir1.2-glib-2.0 gir1.2-gtk-3.0 python3-requests python3-gi lsb-release mesa-utils pciutils
+gir1.2-glib-2.0 gir1.2-gtk-3.0 gir1.2-soup-2.4 python3-requests python3-gi lsb-release mesa-utils pciutils
 ```
 
 ### **Run Application from Source**
 
 Install dependencies
 ```bash
-sudo apt install gir1.2-glib-2.0 gir1.2-gtk-3.0 python3-requests python3-gi lsb-release mesa-utils pciutils
+sudo apt install gir1.2-glib-2.0 gir1.2-gtk-3.0 gir1.2-soup-2.4 python3-requests python3-gi lsb-release mesa-utils pciutils
 ```
 Clone the repository
 ```bash

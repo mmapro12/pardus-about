@@ -1,0 +1,3 @@
+-Gerekli paketler eksiği tamamlandi
+-cli moduna disk bilgileri eklendi (utils.py disk bilgilerini çeken fonksiyon eklendi)
+-No gui modu açıklaması değiştirildi

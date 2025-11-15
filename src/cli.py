@@ -84,6 +84,7 @@ class CLI(object):
         cpu_model, cpu_thread = utils.get_cpu()
         total_ram = utils.get_ram_size()
         gpus = utils.get_gpu()
+        total_gb, used_gb, free_gb, percent = utils.get_disk_usage()
 
         info.append(
             f"{self.colored_text(username, 'green')}{self.colored_text('@', 'red')}{self.colored_text(hostname, 'yellow')}"
@@ -124,6 +125,14 @@ class CLI(object):
                 f"{total_ram} GB",
             )
         )
+
+        info.append(
+            self.colored_info(
+            "Disk",
+            f"{used_gb:.2f} GB / {total_gb:.2f} GB ({percent}%)  Free: {free_gb:.2f} GB",
+            )
+        )
+
         for index, gpu in enumerate(gpus):
             info.append(self.colored_info(f"GPU{index} Vendor", gpu["vendor"]))
             info.append(self.colored_info(f"GPU{index} Device", gpu["device"]))

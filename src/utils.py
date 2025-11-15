@@ -215,8 +215,17 @@ def get_ram_size():
         ram_size = device.get_property_as_uint64(f"MEMORY_DEVICE_{i}_SIZE")
         ram_total += ram_size
 
-    return ram_total / 1024 / 1024 / 1024  # e.g.: 16.0
+    return ram_total / (1024**3)  # e.g.: 16.0
 
+
+def get_disk_usage():
+    usage = psutil.disk_usage('/')
+    total_gb = usage.total / (1024**3)
+    used_gb = usage.used / (1024**3)
+    free_gb = usage.free / (1024**3)
+    percent = usage.percent
+
+    return total_gb, used_gb, free_gb, percent
 
 def get_credentials():
     """
